@@ -7,8 +7,8 @@ import { AuthKitProvider } from '@farcaster/auth-kit';
 // Konfigurasi untuk AuthKit
 const authConfig = {
   rpcUrl: 'https://mainnet.optimism.io', // RPC URL untuk Optimism
-  domain: 'localhost', // Ganti dengan domain Anda saat deploy (misalnya, my-mini-app.vercel.app)
-  siweUri: 'http://localhost:5173/login', // Ganti dengan URL login Anda
+  domain: 'https://miniapps-bice.vercel.app', // Ganti dengan domain Anda saat deploy (misalnya, my-mini-app.vercel.app)
+  siweUri: 'https://miniapps-bice.vercel.app/login', // Ganti dengan URL login Anda
   relay: 'https://relay.farcaster.xyz', // URL relay Farcaster
 };
 
