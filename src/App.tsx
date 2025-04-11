@@ -20,7 +20,7 @@ function App() {
 
   return (
     <div style={{ padding: '20px', textAlign: 'center' }}>
-      <h1>Selamat Datang di Mini App</h1>
+      <h1>WELCOME TO CAST2EARN</h1>
       {!isAuthenticated ? (
         <SignInButton
           onSuccess={({ fid, username }) => {
