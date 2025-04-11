@@ -1,1 +1,11 @@
-{}
+{
+    "version": "1",
+    "name": "🚩 Start",
+    "iconUrl": "https://blush-hidden-mongoose-258.mypinata.cloud/ipfs/bafkreiaplwgcbcett7dxslbxox4nerbo6wc45cav3y3f4frvwqpu4ylcce",
+    "homeUrl": "https://miniapps-bice.vercel.app",
+    "imageUrl": "https://miniapps-bice.vercel.app/image.png",
+    "buttonTitle": "🚩 Start",
+    "splashImageUrl": "https://miniapps-bice.vercel.app/splash.png",
+    "splashBackgroundColor": "#336bff",
+    "webhookUrl": "https://miniapps-bice.vercel.app/webhook"
+  }
