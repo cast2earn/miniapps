@@ -5,7 +5,6 @@ import { sdk } from '@farcaster/frame-sdk';
 function App() {
   const { isAuthenticated, profile } = useProfile();
 
-  // Panggil sdk.actions.ready() saat komponen dimuat
   useEffect(() => {
     const initializeSdk = async () => {
       try {
@@ -16,15 +15,18 @@ function App() {
       }
     };
     initializeSdk();
-  }, []); // [] memastikan ini hanya dijalankan sekali saat komponen dimuat
+  }, []);
 
   return (
     <div style={{ padding: '20px', textAlign: 'center' }}>
-      <h1>WELCOME TO CAST2EARN</h1>
+      <h1>Selamat Datang di Mini App</h1>
       {!isAuthenticated ? (
         <SignInButton
           onSuccess={({ fid, username }) => {
             console.log(`Berhasil login! FID: ${fid}, Username: ${username}`);
+          }}
+          onError={(error) => {
+            console.error('Error saat sign-in:', error);
           }}
         />
       ) : (
@@ -32,15 +34,6 @@ function App() {
           <h2>Profil Pengguna</h2>
           <p><strong>Username:</strong> {profile.username || 'Tidak tersedia'}</p>
           <p><strong>FID:</strong> {profile.fid || 'Tidak tersedia'}</p>
-          <p><strong>Nama Tampilan:</strong> {profile.displayName || 'Tidak tersedia'}</p>
-          <p><strong>Bio:</strong> {profile.bio || 'Tidak tersedia'}</p>
-          {profile.pfpUrl && (
-            <img
-              src={profile.pfpUrl}
-              alt="Foto Profil"
-              style={{ width: '100px', borderRadius: '50%' }}
-            />
-          )}
         </div>
       )}
     </div>
